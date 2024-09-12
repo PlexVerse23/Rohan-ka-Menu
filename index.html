@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+      .bgm{
+        width: 50%;
+        margin-left: 25%;
+      }
+      img{
+      width: 100%;
+    }
+      body {
+        font-family: "Sono", sans-serif;
+      }
+
+      h1{
+        text-align: center;
+        font-size: 100px;
+        background-color: orange;
+      }
+
+      .pricing-container{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+      }
+
+      .pricing-container > *{
+        background: black;;
+        text-align: center;
+        flex-basis: 400px;;
+      }
+      .plan-features{
+        list-style: none;
+        color: white;
+        text-align: left;
+      }
+      .plan-title{
+        font-weight: bold;
+        font-size: 30px;
+        color: white;
+      }
+
+      .plan-price{
+        font-weight: bold;
+        font-size: 40px;
+        color: orange;
+      }
+
+      .plan-button{
+        background: orange;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+
+      @media(any-hover: hover){
+        .plan-button:hover{
+          background:grey;
+        }
+      }
+      @media (max-width: 1250px) {
+        .pricing-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .pricing-container > *{
+        flex-basis: 200px;
+      }
+      .plan-features{
+        text-align: center;
+      }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bgm">
+    <img src="./bgm.jpg" />
+    </div>
+
+    <h1> Rohan Raand Menu </h1>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Choti Lulli</div>
+        <div class="plan-price">10/- day</div>
+        <ul class="plan-features">
+          <li>😋 Bss chuyega</li>
+          <li>✅ 1 User at a time</li>
+          <li>🚫 No mouth support</li>
+        </ul>
+        <button class="plan-button"><a href="./sorry.jpeg">Jhukayen</a></button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Futti Jawani</div>
+        <div class="plan-price">20/- month</div>
+        <ul class="plan-features">
+          <li>✅ Muh mein bhi lega</li>
+          <li>✅ 5 Users at a time</li>
+          <li>✅ Cum in mouth</li>
+        </ul>
+        <button class="plan-button"><a href="./sorry.jpeg">Jhukaiye na</a></button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Bda Hai Tera</div>
+        <div class="plan-price">30/- month</div>
+        <ul class="plan-features">
+          <li>✅ Aage, Peeche, Muh mein</li>
+          <li>✅ Unlimited Users at a time</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button"> <a href="./sorry.jpeg">Jhuka hi Do</a></button>
+      </div>
+    </div>
+  </body>
+</html>
